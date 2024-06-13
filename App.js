@@ -32,8 +32,6 @@ const connection = dbConnect();
 // });
 
 
-
-
 app.listen(port, () => {
     console.log(`${port}번 포트에서 웹 서버 실행 중...`);
 });

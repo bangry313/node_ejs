@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+
 const { 
     getContacts, 
     getContact,
@@ -17,7 +18,7 @@ router
 
 // 연락처 상세 요청 라우트
 router
-.route("/:id")
+.route("/view/:id")
 .get(getContact);
 
 // 연락처 등록 화면 및 등록 요청 라우트

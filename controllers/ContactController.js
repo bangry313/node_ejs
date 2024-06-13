@@ -10,7 +10,8 @@ const getContacts = async (request, response) => {
         // 모델을 이용하여 몽고DB > 데이터베이스(fullstack) > 컬렉션(contacts)에서
         // 모든 도큐먼트 조회
         const contacts = await Contact.find().sort({createdAt: -1});
-        // response.status(200).send(contacts); // JSON 전송
+        // response.status(200).json(contacts); // JSON 전송
+        // response.sendFile(); // 정적인 htmml 파일
         // ejs 템플릿 엔진을 이용한 ejs 템플릿 파일 렌더링
         // response.render("list");
         response.render("./contact/list", { contacts: contacts });
@@ -53,7 +54,6 @@ const registerContact = async (request, response) => {
         response.send(error.message);
     }
 }
-
 
 
 // 연락처 수정 화면 요청 처리

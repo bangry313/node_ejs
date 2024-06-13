@@ -33,7 +33,7 @@
             <tbody>
                 <% contacts.forEach(contact=> { %>
                     <tr>
-                        <td><a href="/contact/<%= contact._id %>"><%= contact.name %></a></td>
+                        <td><a href="/contact/view/<%= contact._id %>"><%= contact.name %></a></td>
                         <td><%= contact.email %></td>
                         <td><%= contact.phone %></td>
                         <td><a href="/contact/edit/<%= contact._id %>" class="btn btn-outline-success btn-sm">수정</a>
